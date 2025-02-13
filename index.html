@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Inserisci la password</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    input { padding: 10px; font-size: 16px; }
+    button { padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Protezione QR</h1>
+  <p>Inserisci la password per sbloccare il contenuto:</p>
+  <form id="passwordForm">
+    <input type="password" id="password" placeholder="Password" required>
+    <button type="submit">Invia</button>
+  </form>
+  <script>
+    document.getElementById("passwordForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      var password = document.getElementById("password").value;
+      // Sostituisci "amore123" con la tua password segreta
+      if(password === "amore123") {
+        // Reindirizza alla pagina con la dedica e gli indizi
+        window.location.href = "https://giocosanvalentinodue.carrd.co/";
+      } else {
+        alert("Password errata, riprova.");
+      }
+    });
+  </script>
+</body>
+</html>
